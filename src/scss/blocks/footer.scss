@@ -1,0 +1,53 @@
+.footer {
+  background-color: $baby-powder-green;
+  padding-bottom: 119px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 135px;
+  }
+
+  &__info {
+    padding-top: 67px;
+    max-width: 345px;
+
+    &-logo {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__navigation,
+  &__contacts {
+    padding-top: 105px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: $nero-gray;
+    margin-bottom: 40px;
+  }
+
+  &__link,
+  &__mail {
+    display: block;
+    line-height: 23px;
+    margin-bottom: 25px;
+  }
+
+  &__mail {
+    color: $nero-gray;
+    white-space: nowrap;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 172px;
+}

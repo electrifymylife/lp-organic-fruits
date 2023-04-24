@@ -1,0 +1,53 @@
+.header {
+  padding: 50px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.navigation {
+
+  &__link {
+    line-height: 24px;
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.user-actions {
+  display: flex;
+
+  &__search {
+    margin-right: 20px;
+  }
+
+  &__register {
+    @include button-square();
+    margin-left: 32px;
+  }
+}
+
+.active {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $teal-green;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 8px;
+    right: 14px;
+  }
+}

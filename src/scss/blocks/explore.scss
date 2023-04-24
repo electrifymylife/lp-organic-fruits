@@ -1,0 +1,35 @@
+.explore {
+  background-color: $mint-cream-green;
+  padding-top: 89px;
+  padding-bottom: 144px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__wrapper {
+    width: 50%;
+  }
+
+  &__img {
+    max-width: 600px;
+    width: 45%;
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__link {
+    @include arrow-link;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,40 @@
+.app {
+  padding-bottom: 140px;
+
+  &__container {
+    display: flex;
+    gap: 130px;
+    align-items: center;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: $dark-charcoal;
+    background-color: $mint-cream-green;
+    border-radius: 50px;
+    padding: 11px 24px;
+    margin-bottom: 27px;
+  }
+
+  &__wrapper {
+    width: 60%;
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    width: 90%;
+  }
+
+  &__links {
+    display: flex;
+    gap: 24px;
+  }
+}
