@@ -17,6 +17,7 @@
 <body>
   <header class="header">
     <div class="container header__container">
+      <button class="toggle closed" type="button"></button>
       <nav class="navigation">
         <a href="#" class="navigation__link">About Us</a>
         <a href="#" class="navigation__link">Service</a>
@@ -59,7 +60,8 @@
           </a>
         </div>
         <div class="advantages__wrapper">
-          <img src="./assets/img/vegetables-fruits.png" alt="Picture of many fruits and vegetables" />
+          <img src="./assets/img/vegetables-fruits.png" alt="Picture of many fruits and vegetables"
+               class="advantages__img" />
           <ul class="advantages__list">
             <li class="advantages__item">
               <span class="advantages__num">30K</span>
@@ -143,31 +145,33 @@
                 <img src="./assets/img/ratio-dummy.svg" alt="Customer's review ratio" class="customers__ratio">
               </div>
             </div>
-            <div class="swiper-button-prev">
-              <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="28.7959" cy="28.5762" r="28" fill="#09A66D"/>
-                <g clip-path="url(#clip0_260_50)">
-                  <path d="M30.6 29.4853L24 22.8853L25.8853 21L34.3707 29.4853L25.8853 37.9707L24 36.0853L30.6 29.4853Z" fill="white"/>
-                </g>
-                <defs>
-                  <clipPath id="clip0_260_50">
-                    <rect width="32" height="32" fill="white" transform="translate(12.7959 12.5762)"/>
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-            <div class="swiper-button-next">
-              <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="28.7959" cy="28.5762" r="28" fill="#09A66D"/>
-                <g clip-path="url(#clip0_260_50)">
-                  <path d="M30.6 29.4853L24 22.8853L25.8853 21L34.3707 29.4853L25.8853 37.9707L24 36.0853L30.6 29.4853Z" fill="white"/>
-                </g>
-                <defs>
-                  <clipPath id="clip0_260_50">
-                    <rect width="32" height="32" fill="white" transform="translate(12.7959 12.5762)"/>
-                  </clipPath>
-                </defs>
-              </svg>
+            <div class="swiper-buttons">
+              <div class="swiper-button-prev">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="28.7959" cy="28.5762" r="28" fill="#09A66D"/>
+                  <g clip-path="url(#clip0_260_50)">
+                    <path d="M30.6 29.4853L24 22.8853L25.8853 21L34.3707 29.4853L25.8853 37.9707L24 36.0853L30.6 29.4853Z" fill="white"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_260_50">
+                      <rect width="32" height="32" fill="white" transform="translate(12.7959 12.5762)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="28.7959" cy="28.5762" r="28" fill="#09A66D"/>
+                  <g clip-path="url(#clip0_260_50)">
+                    <path d="M30.6 29.4853L24 22.8853L25.8853 21L34.3707 29.4853L25.8853 37.9707L24 36.0853L30.6 29.4853Z" fill="white"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_260_50">
+                      <rect width="32" height="32" fill="white" transform="translate(12.7959 12.5762)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

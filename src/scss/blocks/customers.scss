@@ -1,16 +1,31 @@
 .customers {
   padding-top: 96px;
-  padding-bottom: 150px;
+  padding-bottom: 75px;
+  @media (max-width: $tablet-bp) {
+    padding: 50px 0;
+  }
+  @media (max-width: $mobile-bp) {
+    padding: 30px 0;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 100px;
+    @media (max-width: $tablet-big-bp) {
+      gap: 0;
+    }
+    @media (max-width: $mobile-bp) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__wrapper {
     width: 55%;
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+    }
   }
 
   &__img {
@@ -18,6 +33,14 @@
       max-width: 500px;
       width: 35%;
       position: relative;
+      @media (max-width: $tablet-big-bp) {
+        max-width: unset;
+        width: 45%;
+      }
+      @media (max-width: $mobile-bp) {
+        width: 90%;
+        margin-bottom: 30px;
+      }
     }
     &-block {
       position: absolute;
@@ -33,6 +56,10 @@
       background-color: $white;
       box-shadow: -15px 15px 25px rgba(0, 96, 60, 0.04);
       border-radius: 12px;
+      @media (max-width: $tablet-bp) {
+        max-width: 170px;
+        left: -20px;
+      }
     }
     &-avatars {
       margin-top: 10px;
@@ -43,12 +70,22 @@
   &__title {
     @include title;
     margin-bottom: 30px;
+    @media (max-width: $mobile-bp) {
+      margin-bottom: 20px;
+    }
   }
 
   &__review {
     width: 90%;
     min-height: 180px;
     margin-bottom: 40px;
+    @media (max-width: $tablet-bp) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
 
   &__name {
@@ -58,6 +95,30 @@
     line-height: 36px;
     color: $nero-gray;
     margin-bottom: 20px;
+    @media (max-width: $tablet-big-bp) {
+      width: 90%;
+    }
+    @media (max-width: $tablet-bp) {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+    }
+  }
+}
+
+.swiper-slide {
+  @media (max-width: $tablet-big-bp) {
+    padding-bottom: 50px;
+  }
+}
+
+.swiper-buttons {
+  @media (max-width: $tablet-big-bp) {
+    display: flex;
+    gap: 20px;
   }
 }
 
@@ -70,6 +131,9 @@
   &:after {
     display: none;
   }
+  @media (max-width: $tablet-big-bp) {
+    position: unset;
+  }
 }
 
 .swiper-button-prev {
@@ -78,10 +142,17 @@
   path {
     transform: translate(2px, -2px);
   }
+  @media (max-width: $tablet-big-bp) {
+    left: 0;
+  }
 }
 
 .swiper-button-next {
   right: 29%;
+  @media (max-width: $tablet-big-bp) {
+    right: 0;
+    left: 75px;
+  }
 }
 
 .swiper-button-next.swiper-button-disabled,

@@ -2,6 +2,9 @@
   background-color: $mint-cream-green;
   padding-top: 93px;
   padding-bottom: 50px;
+  @media (max-width: $mobile-bp) {
+    padding: 50px 0;
+  }
 
   &__info {
     text-align: center;
@@ -15,6 +18,9 @@
   &__text {
     max-width: 637px;
     margin: 0 auto 40px;
+    @media (max-width: $mobile-bp) {
+      margin: 0 auto 20px;
+    }
   }
 
   &__order {
@@ -27,10 +33,39 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    @media (max-width: $mobile-bp) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 862px;
+    height: 100%;
+    @media (max-width: $tablet-big-bp) {
+      width: 70%;
+    }
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
     min-width: 250px;
+    @media (max-width: $tablet-bp) {
+      min-width: unset;
+      width: 30%;
+    }
+    @media (max-width: $mobile-bp) {
+      width: 55%;
+    }
+    @media (max-width: $smallest-bp) {
+      width: 70%;
+    }
   }
 
   &__item {
@@ -41,7 +76,10 @@
     padding-left: calc(33px + 56px + 24px);
     padding-right: 33px;
     margin-bottom: 30px;
-
+    @media (max-width: $tablet-bp) {
+      padding-left: calc(17px + 56px + 17px);
+      padding-right: 17px;
+    }
 
     &:before {
       position: absolute;
@@ -52,6 +90,9 @@
       height: 56px;
       top: 25%;
       left: 33px;
+      @media (max-width: $tablet-bp) {
+        left: 17px;
+      }
     }
 
     &:nth-child(1):before {
@@ -78,12 +119,16 @@
     line-height: 48px;
     color: $black;
     text-align: center;
+    @media (max-width: $tablet-bp) {
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
 
   &__type {
     display: block;
     font-weight: 400;
-    font-size: 18px;
+    font-size: inherit;
     line-height: 30px;
     color: $black;
     text-align: center;

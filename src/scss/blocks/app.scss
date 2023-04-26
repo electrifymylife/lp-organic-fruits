@@ -1,10 +1,24 @@
 .app {
+  padding-top: 75px;
   padding-bottom: 140px;
+  @media (max-width: $tablet-bp) {
+    padding: 50px 0;
+  }
+  @media (max-width: $mobile-bp) {
+    padding: 30px 0;
+  }
 
   &__container {
     display: flex;
-    gap: 130px;
     align-items: center;
+    gap: 130px;
+    @media (max-width: $tablet-bp) {
+      gap: 50px;
+    }
+    @media (max-width: $mobile-bp) {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
   }
 
   &__subtitle {
@@ -21,6 +35,9 @@
 
   &__wrapper {
     width: 60%;
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -29,8 +46,12 @@
   }
 
   &__text {
-    margin-bottom: 50px;
     width: 90%;
+    margin-bottom: 50px;
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__links {
