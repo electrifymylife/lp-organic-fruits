@@ -21,9 +21,28 @@
   }
 
   &__wrapper {
+    position: relative;
     width: 50%;
+    z-index: 1;
     @media (max-width: $mobile-bp) {
       width: 100%;
+    }
+  }
+
+  &__leaves {
+    position: absolute;
+    top: -160px;
+    left: 70%;
+    width: 43.5%;
+    max-width: 413px;
+    z-index: -1;
+    @media (max-width: $tablet-bp) {
+      top: -120px;
+      right: -50px;
+      width: 35%;
+    }
+    @media (max-width: $mobile-bp) {
+      display: none;
     }
   }
 

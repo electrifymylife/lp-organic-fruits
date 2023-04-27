@@ -1,0 +1,1 @@
+const counters=document.querySelectorAll(".advantages__counter"),speed=200,updateCounter=()=>{for(let t of counters){const e=+t.getAttribute("data-target"),n=+t.textContent,o=e/200;n<e?(t.textContent=Math.ceil(n+o),setTimeout(updateCounter,200)):n.textContent=e}};updateCounter();

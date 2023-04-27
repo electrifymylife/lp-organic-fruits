@@ -9,9 +9,20 @@
   <link rel="preload" href="./assets/fonts/DMSans-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="./assets/fonts/DMSans-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="./assets/fonts/DMSans-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!--libs-->
   <link rel="stylesheet" href="./assets/libs/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css">
+  <!--local styles-->
   <link rel="stylesheet" href="style.css">
+  <!--libs-->
+  <script src="./assets/libs/parallax.min.js" defer></script>
+  <script src="./assets/libs/swiper-bundle.min.js" defer></script>
+  <!--local scripts-->
+  <script src="./assets/js/leaves-parallax.js" defer></script>
+  <script src="./assets/js/screen1-counter.js" defer></script>
+  <script src="./assets/js/navigation-toggle.js" defer></script>
+  <script src="./assets/js/smooth-links.js" defer></script>
+  <script src="./assets/js/swiper.js" defer></script>
   <title>Document</title>
 </head>
 <body>
@@ -24,7 +35,7 @@
         <a href="#" class="navigation__link">Menu</a>
         <a href="#" class="navigation__link">Contact</a>
       </nav>
-      <img class="header__logo" src="./assets/img/logo.svg" alt="Company logo"/>
+      <img class="header__logo" src="./assets/img/logo.svg" alt="Company logo">
       <div class="user-actions">
         <button class="user-actions__search">
           <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,6 +60,11 @@
   <main>
     <section class="screen1">
       <div class="container">
+        <div class="screen1__scene">
+          <div data-depth="0.2">
+            <img src="./assets/img/leaves.png" alt="Picture of green leaves" class="screen1__leaves">
+          </div>
+        </div>
         <div class="screen1__info">
           <h1 class="screen1__title">Organic Fruit & Vegetables</h1>
           <p class="screen1__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
@@ -61,18 +77,23 @@
         </div>
         <div class="advantages__wrapper">
           <img src="./assets/img/vegetables-fruits.png" alt="Picture of many fruits and vegetables"
-               class="advantages__img" />
+               class="advantages__img">
           <ul class="advantages__list">
             <li class="advantages__item">
-              <span class="advantages__num">30K</span>
+              <span class="advantages__num">
+                <span class="advantages__counter" data-target="30">0</span>K
+              </span>
               <span class="advantages__type">User Order</span>
             </li>
             <li class="advantages__item">
-              <span class="advantages__num">20K</span>
+              <span class="advantages__num">
+                <span class="advantages__counter" data-target="20">0</span>K</span>
               <span class="advantages__type">Reviews(4.8)</span>
             </li>
             <li class="advantages__item">
-              <span class="advantages__num">300</span>
+              <span class="advantages__num">
+                <span class="advantages__counter" data-target="300">0</span>
+              </span>
               <span class="advantages__type">Items</span>
             </li>
           </ul>
@@ -98,13 +119,13 @@
               <p class="best__item-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </li>
           </ul>
-          <img class="best__img" src="./assets/img/best-delivery-man.png" alt="Delivery man image" />
+          <img class="best__img" src="./assets/img/best-delivery-man.png" alt="Delivery man image">
         </div>
       </div>
     </section>
     <section class="explore">
       <div class="container explore__container">
-        <img class="explore__img" src="./assets/img/fruits.png" alt="Fruits image" class="fruits">
+        <img class="explore__img" src="./assets/img/fruits.png" alt="Fruits image">
         <div class="explore__wrapper">
           <h2 class="explore__title">Explore Our Special Items</h2>
           <p class="explore__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer...</p>
@@ -114,6 +135,11 @@
               <path d="M48.7071 33.6759C49.0976 33.2853 49.0976 32.6522 48.7071 32.2616L42.3431 25.8977C41.9526 25.5072 41.3195 25.5072 40.9289 25.8977C40.5384 26.2882 40.5384 26.9214 40.9289 27.3119L46.5858 32.9688L40.9289 38.6256C40.5384 39.0161 40.5384 39.6493 40.9289 40.0398C41.3195 40.4303 41.9526 40.4303 42.3431 40.0398L48.7071 33.6759ZM16 33.9688H48V31.9688H16V33.9688Z" fill="white"/>
             </svg>
           </a>
+        </div>
+      </div>
+      <div class="explore__scene">
+        <div data-depth="0.2">
+          <img src="./assets/img/leaves.png" alt="Picture of green leaves" class="explore__leaves">
         </div>
       </div>
     </section>
@@ -162,11 +188,11 @@
               <div class="swiper-button-next">
                 <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="28.7959" cy="28.5762" r="28" fill="#09A66D"/>
-                  <g clip-path="url(#clip0_260_50)">
+                  <g clip-path="url(#clip0_260_51)">
                     <path d="M30.6 29.4853L24 22.8853L25.8853 21L34.3707 29.4853L25.8853 37.9707L24 36.0853L30.6 29.4853Z" fill="white"/>
                   </g>
                   <defs>
-                    <clipPath id="clip0_260_50">
+                    <clipPath id="clip0_260_51">
                       <rect width="32" height="32" fill="white" transform="translate(12.7959 12.5762)"/>
                     </clipPath>
                   </defs>
@@ -176,7 +202,7 @@
           </div>
         </div>
         <div class="customers__img-wrapper">
-          <img src="./assets/img/beard-man.png" alt="Picture of customer" class="customers__img"/>
+          <img src="./assets/img/beard-man.png" alt="Picture of customer" class="customers__img">
           <div class="customers__img-block">
             <img src="./assets/img/ratio-dummy.svg" alt="Customers' overall ratio" class="customers__img-ratio">
             <img src="./assets/img/customers-avatars.png" alt="Customers' avatars" class="customers__img-avatars">
@@ -186,7 +212,7 @@
     </section>
     <section class="app">
       <div class="container app__container">
-        <img src="./assets/img/phones.png" alt="Picture of mobile phones" class="app__image"/>
+        <img src="./assets/img/phones.png" alt="Picture of mobile phones" class="app__image">
         <div class="app__wrapper">
           <small class="app__subtitle">Download App</small>
           <h2 class="app__title">Simple Way To Order Your Organic Fruit</h2>
@@ -210,7 +236,7 @@
   <footer class="footer">
     <div class="container footer__container">
       <div class="footer__info">
-        <img class="footer__info-logo" src="./assets/img/logo.svg" alt="Company logo"/>
+        <img class="footer__info-logo" src="./assets/img/logo.svg" alt="Company logo">
         <p class="footer__info-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
           Ipsum
           has been the industry's standard dummy text ever since the 1500s, when an unknown printer...</p>
@@ -286,11 +312,5 @@
       </div>
     </div>
   </footer>
-  <!--libs-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <!--local scripts-->
-  <script src="./assets/js/navigation-toggle.js"></script>
-  <script src="./assets/js/smooth-links.js"></script>
-  <script src="./assets/js/swiper.js"></script>
 </body>
 </html>
