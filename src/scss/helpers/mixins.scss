@@ -63,7 +63,7 @@
   }
 
   &:hover, &:focus {
-    background: #1c6f52;
+    background: $tractor-green;
   }
 
   &:visited {
@@ -86,6 +86,13 @@
       width: 40px;
       height: 41px;
       margin-left: 10px;
+    }
+  }
+
+  &:hover, &:focus {
+    color: $tractor-green;
+    svg circle {
+      fill: $tractor-green;
     }
   }
 }

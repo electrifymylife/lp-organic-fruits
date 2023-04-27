@@ -56,6 +56,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 10px;
+    margin-top: 15px;
     @media (max-width: $mobile-bp) {
       flex-direction: column;
       align-items: center;
@@ -83,10 +85,8 @@
       width: 30%;
     }
     @media (max-width: $mobile-bp) {
-      width: 55%;
-    }
-    @media (max-width: $smallest-bp) {
-      width: 70%;
+      width: fit-content;
+      min-width: 50%;
     }
   }
 

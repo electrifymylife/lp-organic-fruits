@@ -27,6 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     @media (max-width: $mobile-bp) {
       flex-direction: column;
     }
@@ -109,7 +110,7 @@
     width: 50%;
     max-width: 600px;
     @media (max-width: $mobile-bp) {
-      width: 80%;
+      width: 90%;
     }
   }
 }

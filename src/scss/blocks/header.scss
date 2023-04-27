@@ -25,9 +25,10 @@
 }
 
 .navigation {
+  max-width: 50%;
   @media (max-width: $mobile-bp) {
     position: fixed;
-    top: 105px;
+    top: 90px;
     left: -100%;
     min-width: 100%;
     min-height: 100vh;
@@ -41,8 +42,42 @@
   }
 
   &__link {
+    display: inline-block;
+    position: relative;
     line-height: 24px;
     margin-right: 40px;
+    background-image: linear-gradient(
+                    to right,
+                    $teal-green,
+                    $teal-green 50%,
+                    $stone-cold-gray 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px 0;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      content: '';
+      background: $teal-green;
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background-position: 0;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
     @media (max-width: $tablet-bp) {
       margin-right: 15px;
     }
@@ -62,8 +97,19 @@
 
   &__search {
     margin-right: 20px;
+    border-radius: 50%;
+    &:hover, &:focus {
+      box-shadow: 0 0 30px #78e5b8;
+    }
     @media (max-width: $tablet-bp) {
       margin-right: 10px;
+    }
+  }
+
+  &__basket {
+    border-radius: 50%;
+    &:hover, &:focus {
+      box-shadow: 0 0 30px #78e5b8;
     }
   }
 

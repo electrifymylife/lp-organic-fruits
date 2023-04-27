@@ -14,7 +14,7 @@
     align-items: center;
     gap: 100px;
     @media (max-width: $tablet-big-bp) {
-      gap: 0;
+      gap: 15px;
     }
     @media (max-width: $mobile-bp) {
       flex-direction: column-reverse;
@@ -130,6 +130,11 @@
   bottom: 0;
   &:after {
     display: none;
+  }
+  &:hover {
+    svg circle {
+      fill: $tractor-green;
+    }
   }
   @media (max-width: $tablet-big-bp) {
     position: unset;
